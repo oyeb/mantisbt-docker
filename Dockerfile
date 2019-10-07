@@ -5,7 +5,7 @@ EXPOSE 80
 RUN cd /tmp && \
 	docker-php-ext-install mysqli && \
 	docker-php-ext-enable mysqli && \
-	curl -sSL https://netix.dl.sourceforge.net/project/mantisbt/mantis-stable/2.22.1/mantisbt-2.22.1.tar.gz | tar xzC /tmp && \
+	curl -sSL https://github.com/mantisbt/mantisbt/archive/release-2.22.1.tar.gz | tar xzC /tmp && \
 	mv mantisbt-*/* /var/www/html && \
 	chown -R www-data:www-data /var/www/html && \
     rm -rf /*.zip /tmp/* /var/tmp/* /var/lib/apt/lists/* && \
