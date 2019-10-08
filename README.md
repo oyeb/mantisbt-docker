@@ -45,7 +45,7 @@ Proxy Forwarding to Docker
 
 Create a mantis.my-site.com.conf in /etc/apache2/sites-available
 
-`
+```
 <VirtualHost *:80>
   ServerAdmin admin@localhost
   ServerName mantis.my-site.com
@@ -58,9 +58,15 @@ Create a mantis.my-site.com.conf in /etc/apache2/sites-available
   ErrorLog ${APACHE_LOG_DIR}/error.log
   CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
-`
+```
 
 Enable the site with 
 
 `a2ensite mantis.my-site.com`
 
+
+
+Credits
+-------
+
+http://www.mantisbt.org/
