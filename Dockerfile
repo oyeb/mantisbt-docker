@@ -2,10 +2,14 @@ FROM php:apache
 
 EXPOSE 80
 
-RUN cd /tmp && \
+RUN apt-get update -y && \
+	apt-get install -y sendmail libpng-dev && \
+	cd /tmp && \
 	docker-php-ext-install mysqli && \
-	docker-php-ext-enable mysqli && \
-	curl -sSL https://github.com/mantisbt/mantisbt/archive/release-2.22.1.tar.gz | tar xzC /tmp && \
+	docker-php-ext-install gd && \
+	docker-php-ext-install mbstring && \
+	docker-php-ext-install fileinfo && \
+	curl -sSL https://downloads.sourceforge.net/project/mantisbt/mantis-stable/2.22.1/mantisbt-2.22.1.tar.gz | tar xzC /tmp && \
 	mv mantisbt-*/* /var/www/html && \
 	chown -R www-data:www-data /var/www/html && \
     rm -rf /*.zip /tmp/* /var/tmp/* /var/lib/apt/lists/* && \
