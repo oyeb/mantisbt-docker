@@ -45,20 +45,22 @@ Proxy Forwarding to Docker
 
 Create a mantis.my-site.com.conf in /etc/apache2/sites-available
 
-`<VirtualHost *:80>
+`
+<VirtualHost *:80>
   ServerAdmin admin@localhost
-	ServerName mantis.my-site.com
-	ServerAlias mantis.my-site.com
-	ProxyPreserveHost On
-	ProxyRequests Off 
-	ProxyPass / http://127.0.0.1:60001/
-	ProxyPassReverse / http://127.0.0.1:60001/
-	
-	ErrorLog ${APACHE_LOG_DIR}/error.log
-	CustomLog ${APACHE_LOG_DIR}/access.log combined
-
+  ServerName mantis.my-site.com
+  ServerAlias mantis.my-site.com
+  ProxyPreserveHost On
+  ProxyRequests Off 
+  ProxyPass / http://127.0.0.1:60001/
+  ProxyPassReverse / http://127.0.0.1:60001/
+  
+  ErrorLog ${APACHE_LOG_DIR}/error.log
+  CustomLog ${APACHE_LOG_DIR}/access.log combined
 </VirtualHost>
 `
 
-Enable the site with `a2ensite mantis.my-site.com`
+Enable the site with 
+
+`a2ensite mantis.my-site.com`
 
