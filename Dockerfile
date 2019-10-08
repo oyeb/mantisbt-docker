@@ -3,7 +3,7 @@ FROM php:apache
 EXPOSE 80
 
 RUN apt-get update -y && \
-	apt-get install -y sendmail libpng-dev && \
+	apt-get install -y libpng-dev && \
 	cd /tmp && \
 	docker-php-ext-install mysqli && \
 	docker-php-ext-install gd && \
@@ -24,5 +24,8 @@ COPY ./httpd.conf /etc/apache2/sites-available/000-default.conf
 
 COPY ./php.ini $PHP_INI_DIR/conf.d/
 
-COPY ./cleanup.sh /
+COPY ./cleanup.sh ./entrypoint.sh /
 
+RUN chmod 500 /entrypoint.sh /cleanup.sh
+
+ENTRYPOINT /entrypoint.sh
