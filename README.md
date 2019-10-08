@@ -1,7 +1,4 @@
-# mantisbt-docker
-
-
-Mantis Bug Tracker (MantisBT)
+Mantis Bug Tracker Docker (MantisBT)
 =============================
 
 Screenshots
@@ -24,15 +21,19 @@ Running
 -------
 
 Run in the background 
+
 `docker run -d -p 60001:80 --name mantisbt j4ym0/mantisbt`
 
 Runing in the forground
+
 `docker run -it -p 60001:80 --name mantisbt j4ym0/mantisbt`
 
 It is recomended to us a external config_inc.php
+
 `docker run -d -v /my/local/config_inc.php:/config/config_inc.php -p 60001:80 --name mantisbt j4ym0/mantisbt`
 
 Use the -p arg for controling the port on the docker host, the container port is always 80 
+
 `-p HOST_PORT:80`
 
 Access the site http://127.0.0.1:60001 if there is no config_inc.php or it is the first time you are running the container. You will go though the initial setup, you will need a SQL database server to connect to. It is not included in the container.
@@ -43,6 +44,7 @@ Proxy Forwarding to Docker
 --------------------------
 
 Create a mantis.my-site.com.conf in /etc/apache2/sites-available
+
 `<VirtualHost *:80>
   ServerAdmin admin@localhost
 	ServerName mantis.my-site.com
