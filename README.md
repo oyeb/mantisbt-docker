@@ -36,6 +36,10 @@ Use the -p arg for controling the port on the docker host, the container port is
 
 `-p HOST_PORT:80`
 
+To get the container to restart at boot or if it should crash add `--restart unless-stopped`
+
+`docker run -d --restart unless-stopped -v /my/local/config_inc.php:/config/config_inc.php -p 60001:80 --name mantisbt j4ym0/mantisbt`
+
 Access the site http://127.0.0.1:60001 if there is no config_inc.php or it is the first time you are running the container. You will go though the initial setup, you will need a SQL database server to connect to. It is not included in the container.
 After instalation you will need to run `docker exec mantisbt /cleanup.sh` to cleanup the instalation folders.
 
