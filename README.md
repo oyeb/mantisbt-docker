@@ -7,11 +7,11 @@ Mantis Bug Tracker (MantisBT)
 Screenshots
 -----------
 
-![Build Status](https://github.com/mantisbt/mantisbt/doc/modern_view_issues.png)
+![Build Status](https://github.com/mantisbt/mantisbt/raw/master/doc/modern_view_issues.png)
 
-![Build Status](https://github.com/mantisbt/mantisbt/doc/modern_my_view.png)
+![Build Status](https://github.com/mantisbt/mantisbt/raw/master/doc/modern_my_view.png)
 
-![Build Status](https://github.com/mantisbt/mantisbt/doc/modern_view_issue.png)
+![Build Status](https://github.com/mantisbt/mantisbt/raw/master/doc/modern_view_issue.png)
 
 Documentation
 -------------
