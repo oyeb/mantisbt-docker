@@ -5,8 +5,8 @@ Mantis Bug Tracker Docker (MantisBT)
   <a href="https://hub.docker.com/r/j4ym0/mantisbt">
     <img src="https://images.microbadger.com/badges/image/j4ym0/mantisbt.svg">
   </a>
-  <a href="https://github.com/j4ym0/mantisbt/releases">
-    <img alt="latest version" src="https://img.shields.io/github/v/tag/j4ym0/mantisbt.svg" />
+  <a href="https://github.com/j4ym0/mantisbt-docker/releases">
+    <img alt="latest version" src="https://img.shields.io/github/v/tag/j4ym0/mantisbt-docker.svg" />
   </a>
   <a href="https://hub.docker.com/r/j4ym0/mantisbt">
     <img alt="Pulls from DockerHub" src="https://img.shields.io/docker/pulls/j4ym0/mantisbt.svg?style=flat-square" />
