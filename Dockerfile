@@ -12,7 +12,8 @@ RUN apt-get update -y && \
 	curl -sSL https://downloads.sourceforge.net/project/mantisbt/mantis-stable/2.24.0/mantisbt-2.24.0.tar.gz | tar xzC /tmp && \
 	mv mantisbt-*/* /var/www/html && \
 	chown -R www-data:www-data /var/www/html && \
-    rm -rf /*.zip /tmp/* /var/tmp/* /var/lib/apt/lists/* && \
+	apt-get autoremove && \
+    	rm -rf /*.zip /tmp/* /var/tmp/* /var/lib/apt/lists/* && \
 	mkdir /config && \
 	cp /var/www/html/config/* /config && \
 	rm -rf /var/www/html/config && \
