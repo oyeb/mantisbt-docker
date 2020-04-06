@@ -3,7 +3,7 @@ FROM php:apache
 EXPOSE 80
 
 RUN apt-get update -y && \
-	apt-get install -y libpng-dev && \
+	apt-get install -y libpng-dev libonig-dev && \
 	cd /tmp && \
 	docker-php-ext-install mysqli && \
 	docker-php-ext-install gd && \
